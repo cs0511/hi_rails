@@ -22,5 +22,10 @@ module HiRails
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.paths << Rails.root.join('node_modules', 'normalize.css')
+    config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'dist', 'js')
+    config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'dist', 'css')
+    config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'dist', 'fonts')
+
   end
 end

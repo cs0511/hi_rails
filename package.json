@@ -1,0 +1,20 @@
+{
+  "name": "hi_rails",
+  "version": "1.0.0",
+  "description": "== README",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "modernizr": "3.5.0",
+    "normalize.css": "^7.0.0"
+  }
+}
