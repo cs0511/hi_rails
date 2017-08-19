@@ -26,10 +26,22 @@ module HiRails
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.assets.paths << Rails.root.join('node_modules', 'normalize.css')
-    config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'dist', 'js')
-    config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'dist', 'css')
-    config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'dist', 'fonts')
+    # config.assets.paths << Rails.root.join('node_modules', 'normalize.css')
+    # config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'dist', 'js')
+    # config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'dist', 'css')
+    # config.assets.paths << Rails.root.join('node_modules', 'bootstrap', 'dist', 'fonts')
 
+
+    #API setting
+    config.middleware.insert_before 0, "Rack::Cors", :debug => true, :logger => (-> { Rails.logger }) do
+      allow do
+        origins '*'
+
+        resource '/api/v1/*',
+                 :headers => :any,
+                 :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+                 :methods => [:get, :post, :options, :delete, :put]
+      end
+    end
   end
 end

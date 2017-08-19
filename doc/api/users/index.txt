@@ -1,0 +1,60 @@
+Getting a list of users
+-----------------------
+
+Parameters:
+  * page - Current page of users
+
+Request:
+  GET /api/v1/users?page=1
+  Accept: application/json
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  page=1
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 2
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"d751713988987e9331980363e24189ce"
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: 36444c59-2bb1-4739-adbb-1dba532c4b4e
+  X-Runtime: 0.053808
+  X-XSS-Protection: 1; mode=block
+
+  [
+  
+  ]
+
+
+Getting a specific user
+-----------------------
+
+Request:
+  GET /api/v1/users/4
+  Accept: application/json
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 116
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"12a9510fe90cbe198c8c004081d7f2b9"
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-Request-Id: 95865014-6d5b-4f93-8492-2e94c9b9227e
+  X-Runtime: 0.010527
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "id": 4,
+    "email": "email@example.com",
+    "created_at": "2017-08-19T13:18:14.037Z",
+    "updated_at": "2017-08-19T13:18:14.037Z"
+  }

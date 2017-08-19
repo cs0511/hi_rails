@@ -3,6 +3,18 @@ Rails.application.routes.draw do
   root to: "home#index"
   devise_for :users, controllers: { sessions: 'users/sessions' }
 
+  namespace :api do
+    namespace :v1 do
+
+      resources :users do
+        collection do
+          get :me
+        end
+      end
+
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
