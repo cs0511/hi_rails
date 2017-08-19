@@ -82,6 +82,11 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.6)
+    jwt (1.5.6)
+    knock (2.1.1)
+      bcrypt (~> 3.1)
+      jwt (~> 1.5)
+      rails (>= 4.2)
     kramdown (1.14.0)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -216,6 +221,7 @@ DEPENDENCIES
   foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
+  knock
   letter_opener
   pg (~> 0.20.0)
   rack-cors

@@ -30,6 +30,7 @@ gem 'rails_layout'
 gem 'rspec_api_documentation'
 gem 'apitome'
 gem 'rack-cors', require: 'rack/cors'
+gem 'knock'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

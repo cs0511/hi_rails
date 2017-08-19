@@ -3,15 +3,14 @@ Rails.application.routes.draw do
   root to: "home#index"
   devise_for :users, controllers: { sessions: 'users/sessions' }
 
+  post 'api/v1/sign_in' => 'api/v1/user_token#create'
   namespace :api do
     namespace :v1 do
-
       resources :users do
         collection do
           get :me
         end
       end
-
     end
   end
 

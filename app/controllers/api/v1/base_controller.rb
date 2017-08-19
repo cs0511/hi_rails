@@ -1,4 +1,5 @@
 class Api::V1::BaseController < ApplicationController
+  include Knock::Authenticable
 
   # skip_before_action :protect_from_forgery
 
@@ -9,5 +10,6 @@ class Api::V1::BaseController < ApplicationController
   # skip_before_action :verify_authenticity_token
 
   skip_before_action :authenticate_user!
+  before_action :authenticate_user
 
 end
