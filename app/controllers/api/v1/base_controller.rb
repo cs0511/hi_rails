@@ -11,5 +11,7 @@ class Api::V1::BaseController < ApplicationController
 
   skip_before_action :authenticate_user!
   before_action :authenticate_user
+  undef_method :current_user
+
 
 end
