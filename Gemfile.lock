@@ -48,6 +48,10 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
     byebug (9.0.6)
+    childprocess (0.9.0)
+      ffi (~> 1.0, >= 1.0.11)
+    code_analyzer (0.4.8)
+      sexp_processor
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -74,6 +78,7 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
+    iniparse (1.4.4)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -106,6 +111,9 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     orm_adapter (0.5.0)
+    overcommit (0.46.0)
+      childprocess (~> 0.6, >= 0.6.3)
+      iniparse (~> 1.4)
     pg (0.20.0)
     public_suffix (2.0.5)
     rack (1.6.8)
@@ -131,6 +139,14 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_best_practices (1.19.3)
+      activesupport
+      code_analyzer (>= 0.4.8)
+      erubis
+      i18n
+      json
+      require_all (~> 2.0)
+      ruby-progressbar
     rails_layout (1.0.41)
     railties (4.2.4)
       actionpack (= 4.2.4)
@@ -142,6 +158,7 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
+    require_all (2.0.0)
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
     rspec (3.6.0)
@@ -169,6 +186,7 @@ GEM
       activesupport (>= 3.0.0)
       mustache (~> 1.0, >= 0.99.4)
       rspec (~> 3.0)
+    ruby-progressbar (1.10.0)
     sass (3.5.1)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -183,6 +201,7 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sexp_processor (4.11.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     sprockets (3.7.1)
@@ -223,9 +242,11 @@ DEPENDENCIES
   jquery-rails
   knock
   letter_opener
+  overcommit
   pg (~> 0.20.0)
   rack-cors
   rails (= 4.2.4)
+  rails_best_practices
   rails_layout
   rspec-rails
   rspec_api_documentation
