@@ -34,3 +34,4 @@
 PreCommit:
   RailsBestPractices:
     enabled: true
+    problem_on_unmodified_line: false
