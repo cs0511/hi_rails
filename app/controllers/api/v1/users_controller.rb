@@ -2,7 +2,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   before_action :set_user, only: [:show, :update]
 
   def index
-    p Time.now
+    p Time.now   
 
     @users = User.all
   end
